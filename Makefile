@@ -41,7 +41,7 @@ check: up
 	@set -eu; \
 	file=$$(ls checks/$(LAB)-*.sql 2>/dev/null | head -1); \
 	if [ -z "$$file" ]; then \
-	  echo "No check for LAB=$(LAB). Try LAB=01, 02, 03 or 04."; \
+	  echo "No check for LAB=$(LAB). Try LAB=01, 02, 03, 04 or 05."; \
 	  exit 1; \
 	fi; \
 	echo "Running $$file"; \
@@ -51,7 +51,7 @@ check: up
 run:
 	@set -eu; \
 	if [ -z "$(FILE)" ]; then \
-	  echo "Usage: make run FILE=solutions/04-migration.sql"; \
+	  echo "Usage: make run FILE=solutions/05-migration.sql"; \
 	  exit 1; \
 	fi; \
 	$(COMPOSE) exec -T postgres psql -v ON_ERROR_STOP=1 \

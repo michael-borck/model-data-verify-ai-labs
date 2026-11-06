@@ -39,7 +39,8 @@ local PostgreSQL server. The container is reachable only from your machine.
 | 01 | Model before query | `make check LAB=01` |
 | 02 | Relationships and constraints | `make check LAB=02` |
 | 03 | Questions into SQL | `make check LAB=03` |
-| 04 | Change without damage | `make check LAB=04` |
+| 04 | Joins and the grain | `make check LAB=04` |
+| 05 | Change without damage | `make check LAB=05` |
 
 Each lab guide is in `exercises/`. Read the chapter, do the tasks, then run the
 check. The check is the point: it fails loudly when the answer is wrong.
@@ -85,7 +86,7 @@ book teaches, written down so you can run it.
 
 ## The migration lab
 
-Lab 04 starts from the base schema without `orders.channel`.
+Lab 05 starts from the base schema without `orders.channel`.
 
 ```bash
 make reset
@@ -95,10 +96,10 @@ make psql
 Write your migration, then run:
 
 ```bash
-make check LAB=04
+make check LAB=05
 ```
 
-A solution is in `solutions/04-migration.sql`. Read it after your own attempt.
+A solution is in `solutions/05-migration.sql`. Read it after your own attempt.
 The order of the steps is the lesson, not the exact text.
 
 ## Security
@@ -150,14 +151,16 @@ Docker feature or use the repository's dev container.
 │   ├── 01-model.sql
 │   ├── 02-constraints.sql
 │   ├── 03-queries.sql
-│   └── 04-migration.sql
+│   ├── 04-joins.sql
+│   └── 05-migration.sql
 ├── exercises/
 │   ├── 01-model.md
 │   ├── 02-constraints.md
 │   ├── 03-queries.md
-│   └── 04-migration.md
+│   ├── 04-joins.md
+│   └── 05-migration.md
 └── solutions/
-    └── 04-migration.sql
+    └── 05-migration.sql
 ```
 
 ## Troubleshooting

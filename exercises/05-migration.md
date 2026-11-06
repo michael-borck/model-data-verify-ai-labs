@@ -1,6 +1,6 @@
-# Lab 04: Change without damage
+# Lab 05: Change without damage
 
-Chapter: [Change Without Damage](https://github.com/michael-borck/model-data-verify-ai/blob/main/chapters/04-change-without-damage.qmd)
+Chapter: [Change Without Damage](https://github.com/michael-borck/model-data-verify-ai/blob/main/chapters/05-change-without-damage.qmd)
 
 ## Start
 
@@ -27,8 +27,8 @@ The reset gives you the base schema without `orders.channel`.
 ## Run a solution
 
 ```bash
-make run FILE=solutions/04-migration.sql
-make check LAB=04
+make run FILE=solutions/05-migration.sql
+make check LAB=05
 ```
 
 Read the solution only after you have written your own. The point is the order of
@@ -37,7 +37,7 @@ the steps and the lock budget, not the exact file.
 ## Check
 
 ```bash
-make check LAB=04
+make check LAB=05
 ```
 
 The check confirms the column exists, is `NOT NULL`, has no nulls, has only the

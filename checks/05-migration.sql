@@ -49,4 +49,4 @@ BEGIN
   END;
 END $$;
 
-\echo '04-migration checks passed'
+\echo '05-migration checks passed'
