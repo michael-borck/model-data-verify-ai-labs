@@ -57,4 +57,4 @@ the cascade that should work.
 
 ## Reset
 
-Lab 05 changes the schema. Run `make reset` before repeating labs 01 to 04.
+Lab 06 changes the schema. Run `make reset` before repeating labs 01 to 05.
