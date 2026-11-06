@@ -75,4 +75,4 @@ BEGIN
   END IF;
 END $$;
 
-\echo '02-query checks passed'
+\echo '03-query checks passed'

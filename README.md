@@ -37,8 +37,9 @@ local PostgreSQL server. The container is reachable only from your machine.
 | Lab | Chapter | Check |
 |---|---|---|
 | 01 | Model before query | `make check LAB=01` |
-| 02 | Questions into SQL | `make check LAB=02` |
-| 03 | Change without damage | `make check LAB=03` |
+| 02 | Relationships and constraints | `make check LAB=02` |
+| 03 | Questions into SQL | `make check LAB=03` |
+| 04 | Change without damage | `make check LAB=04` |
 
 Each lab guide is in `exercises/`. Read the chapter, do the tasks, then run the
 check. The check is the point: it fails loudly when the answer is wrong.
@@ -76,7 +77,7 @@ Each file in `checks/` is a SQL script that asserts the expected result. A faile
 assertion stops with an exception. A successful run ends with a line like:
 
 ```text
-02-query checks passed
+03-query checks passed
 ```
 
 The checks are not a grading system. They are the same known-answer discipline the
@@ -84,7 +85,7 @@ book teaches, written down so you can run it.
 
 ## The migration lab
 
-Lab 03 starts from the base schema without `orders.channel`.
+Lab 04 starts from the base schema without `orders.channel`.
 
 ```bash
 make reset
@@ -94,10 +95,10 @@ make psql
 Write your migration, then run:
 
 ```bash
-make check LAB=03
+make check LAB=04
 ```
 
-A solution is in `solutions/03-migration.sql`. Read it after your own attempt.
+A solution is in `solutions/04-migration.sql`. Read it after your own attempt.
 The order of the steps is the lesson, not the exact text.
 
 ## Security
@@ -147,14 +148,16 @@ Docker feature or use the repository's dev container.
 │   └── known-answers.md
 ├── checks/
 │   ├── 01-model.sql
-│   ├── 02-queries.sql
-│   └── 03-migration.sql
+│   ├── 02-constraints.sql
+│   ├── 03-queries.sql
+│   └── 04-migration.sql
 ├── exercises/
 │   ├── 01-model.md
-│   ├── 02-queries.md
-│   └── 03-migration.md
+│   ├── 02-constraints.md
+│   ├── 03-queries.md
+│   └── 04-migration.md
 └── solutions/
-    └── 03-migration.sql
+    └── 04-migration.sql
 ```
 
 ## Troubleshooting

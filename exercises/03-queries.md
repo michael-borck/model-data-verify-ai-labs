@@ -1,6 +1,6 @@
-# Lab 02: Questions into SQL
+# Lab 03: Questions into SQL
 
-Chapter: [Questions into SQL](https://github.com/michael-borck/model-data-verify-ai/blob/main/chapters/02-questions-into-sql.qmd)
+Chapter: [Questions into SQL](https://github.com/michael-borck/model-data-verify-ai/blob/main/chapters/03-questions-into-sql.qmd)
 
 ## Start
 
@@ -36,7 +36,7 @@ Then write the monthly view:
 ## Check
 
 ```bash
-make check LAB=02
+make check LAB=03
 ```
 
 The check runs the five known answers and the January average. It fails on the
