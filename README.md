@@ -42,6 +42,7 @@ local PostgreSQL server. The container is reachable only from your machine.
 | 04 | Joins and the grain | `make check LAB=04` |
 | 05 | Transactions and isolation | `make scenario LAB=05` |
 | 06 | Change without damage | `make check LAB=06` |
+| 07 | Backfills and idempotence | `make check LAB=07` |
 
 Each lab guide is in `exercises/`. Read the chapter, do the tasks, then run the
 check. The check is the point: it fails loudly when the answer is wrong.
@@ -157,14 +158,16 @@ Docker feature or use the repository's dev container.
 │   ├── 02-constraints.sql
 │   ├── 03-queries.sql
 │   ├── 04-joins.sql
-│   └── 06-migration.sql
+│   ├── 06-migration.sql
+│   └── 07-backfill.sql
 ├── exercises/
 │   ├── 01-model.md
 │   ├── 02-constraints.md
 │   ├── 03-queries.md
 │   ├── 04-joins.md
 │   ├── 05-transactions.md
-│   └── 06-migration.md
+│   ├── 06-migration.md
+│   └── 07-backfill.md
 ├── scenarios/
 │   └── 05-transactions.sh
 └── solutions/
