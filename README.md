@@ -51,6 +51,7 @@ local PostgreSQL server. The container is reachable only from your machine.
 | 13 | Retrieval quality | `make check LAB=13` |
 | 14 | Aggregation and grouping | `make check LAB=14` |
 | 15 | CTEs, windows and readable SQL | `make check LAB=15` |
+| 16 | The verified data layer | `make capstone` |
 
 Each lab guide is in `exercises/`. Read the chapter, do the tasks, then run the
 check. The check is the point: it fails loudly when the answer is wrong.
@@ -95,8 +96,8 @@ assertion stops with an exception. A successful run ends with a line like:
 The checks are not a grading system. They are the same known-answer discipline the
 book teaches, written down so you can run it.
 
-Labs 05 and 09 are scenarios, not SQL checks.
-Run them with `make scenario LAB=05` and `make scenario LAB=09`.
+Labs 05 and 09 are scenarios, not SQL checks. The capstone runs the whole suite.
+Use `make scenario LAB=05`, `make scenario LAB=09` and `make capstone`.
 
 ## The migration lab
 
@@ -190,7 +191,8 @@ Docker feature or use the repository's dev container.
 │   ├── 12-vectors.md
 │   ├── 13-retrieval.md
 │   ├── 14-aggregation.md
-│   └── 15-ctes-windows.md
+│   ├── 15-ctes-windows.md
+│   └── 16-capstone.md
 ├── scenarios/
 │   ├── 05-transactions.sh
 │   └── 09-backup.sh

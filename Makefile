@@ -8,7 +8,7 @@ POSTGRES_DB   ?= model_data_verify_ai
 POSTGRES_PORT ?= 5433
 COMPOSE       ?= docker compose
 
-.PHONY: help up down reset psql logs session1 session2 check run scenario
+.PHONY: help up down reset psql logs session1 session2 check run scenario capstone
 
 help:
 	@echo "make up                 start Postgres"
@@ -16,6 +16,7 @@ help:
 	@echo "make check LAB=01       run a chapter check"
 	@echo "make scenario LAB=05    run a two-session transaction scenario"
 	@echo "make scenario LAB=09    run a dump and restore test"
+	@echo "make capstone           run the whole verified-data-layer suite"
 	@echo "make run FILE=path.sql  run a SQL file"
 	@echo "make reset              destroy the volume and rebuild from seed"
 	@echo "make logs               follow the database log"
@@ -68,3 +69,23 @@ scenario: up
 	fi; \
 	echo "Running $$file"; \
 	bash "$$file"
+
+capstone:
+	$(MAKE) reset
+	$(MAKE) check LAB=01
+	$(MAKE) check LAB=02
+	$(MAKE) check LAB=03
+	$(MAKE) check LAB=04
+	$(MAKE) check LAB=14
+	$(MAKE) check LAB=15
+	$(MAKE) scenario LAB=05
+	$(MAKE) run FILE=solutions/06-migration.sql
+	$(MAKE) check LAB=06
+	$(MAKE) check LAB=07
+	$(MAKE) check LAB=08
+	$(MAKE) scenario LAB=09
+	$(MAKE) check LAB=10
+	$(MAKE) check LAB=11
+	$(MAKE) check LAB=12
+	$(MAKE) check LAB=13
+	$(MAKE) down
