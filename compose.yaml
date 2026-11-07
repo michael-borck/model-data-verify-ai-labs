@@ -2,7 +2,7 @@ name: mdvai-lab
 
 services:
   postgres:
-    image: postgres:16-alpine
+    image: pgvector/pgvector:pg16
     container_name: mdvai-postgres
     environment:
       POSTGRES_DB: ${POSTGRES_DB:-model_data_verify_ai}

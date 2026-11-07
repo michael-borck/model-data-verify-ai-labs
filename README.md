@@ -47,6 +47,7 @@ local PostgreSQL server. The container is reachable only from your machine.
 | 09 | Backups and restore tests | `make scenario LAB=09` |
 | 10 | Access, roles and row-level security | `make check LAB=10` |
 | 11 | Privacy, retention and injection | `make check LAB=11` |
+| 12 | Vectors and semantic search | `make check LAB=12` |
 
 Each lab guide is in `exercises/`. Read the chapter, do the tasks, then run the
 check. The check is the point: it fails loudly when the answer is wrong.
@@ -69,7 +70,7 @@ database volume is first created. If you change the seed or break the schema, re
 
 ## What is in the container
 
-- PostgreSQL 16.
+- PostgreSQL 16 with the `pgvector` extension.
 - The Harbour Coffee schema from `db/schema.sql`.
 - The seed data from `db/seed.sql`.
 - A named volume for the data, so a restart keeps your work.
@@ -166,7 +167,8 @@ Docker feature or use the repository's dev container.
 │   ├── 07-backfill.sql
 │   ├── 08-indexes.sql
 │   ├── 10-access.sql
-│   └── 11-privacy.sql
+│   ├── 11-privacy.sql
+│   └── 12-vectors.sql
 ├── exercises/
 │   ├── 01-model.md
 │   ├── 02-constraints.md
@@ -178,7 +180,8 @@ Docker feature or use the repository's dev container.
 │   ├── 08-indexes.md
 │   ├── 09-backup.md
 │   ├── 10-access.md
-│   └── 11-privacy.md
+│   ├── 11-privacy.md
+│   └── 12-vectors.md
 ├── scenarios/
 │   ├── 05-transactions.sh
 │   └── 09-backup.sh
