@@ -49,6 +49,7 @@ local PostgreSQL server. The container is reachable only from your machine.
 | 11 | Privacy, retention and injection | `make check LAB=11` |
 | 12 | Vectors and semantic search | `make check LAB=12` |
 | 13 | Retrieval quality | `make check LAB=13` |
+| 14 | Aggregation and grouping | `make check LAB=14` |
 
 Each lab guide is in `exercises/`. Read the chapter, do the tasks, then run the
 check. The check is the point: it fails loudly when the answer is wrong.
@@ -170,7 +171,8 @@ Docker feature or use the repository's dev container.
 │   ├── 10-access.sql
 │   ├── 11-privacy.sql
 │   ├── 12-vectors.sql
-│   └── 13-retrieval.sql
+│   ├── 13-retrieval.sql
+│   └── 14-aggregation.sql
 ├── exercises/
 │   ├── 01-model.md
 │   ├── 02-constraints.md
@@ -184,7 +186,8 @@ Docker feature or use the repository's dev container.
 │   ├── 10-access.md
 │   ├── 11-privacy.md
 │   ├── 12-vectors.md
-│   └── 13-retrieval.md
+│   ├── 13-retrieval.md
+│   └── 14-aggregation.md
 ├── scenarios/
 │   ├── 05-transactions.sh
 │   └── 09-backup.sh
