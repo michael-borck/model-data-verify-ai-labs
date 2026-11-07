@@ -43,7 +43,7 @@ check: up
 	@set -eu; \
 	file=$$(ls checks/$(LAB)-*.sql 2>/dev/null | head -1); \
 	if [ -z "$$file" ]; then \
-	  echo "No check for LAB=$(LAB). Try LAB=01, 02, 03, 04, 06, 07, 08, 10, 11, 12, 13 or 14. For 05 or 09 use make scenario."; \
+	  echo "No check for LAB=$(LAB). Try LAB=01, 02, 03, 04, 06, 07, 08, 10, 11, 12, 13, 14 or 15. For 05 or 09 use make scenario."; \
 	  exit 1; \
 	fi; \
 	echo "Running $$file"; \

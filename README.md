@@ -50,6 +50,7 @@ local PostgreSQL server. The container is reachable only from your machine.
 | 12 | Vectors and semantic search | `make check LAB=12` |
 | 13 | Retrieval quality | `make check LAB=13` |
 | 14 | Aggregation and grouping | `make check LAB=14` |
+| 15 | CTEs, windows and readable SQL | `make check LAB=15` |
 
 Each lab guide is in `exercises/`. Read the chapter, do the tasks, then run the
 check. The check is the point: it fails loudly when the answer is wrong.
@@ -172,7 +173,8 @@ Docker feature or use the repository's dev container.
 │   ├── 11-privacy.sql
 │   ├── 12-vectors.sql
 │   ├── 13-retrieval.sql
-│   └── 14-aggregation.sql
+│   ├── 14-aggregation.sql
+│   └── 15-ctes-windows.sql
 ├── exercises/
 │   ├── 01-model.md
 │   ├── 02-constraints.md
@@ -187,7 +189,8 @@ Docker feature or use the repository's dev container.
 │   ├── 11-privacy.md
 │   ├── 12-vectors.md
 │   ├── 13-retrieval.md
-│   └── 14-aggregation.md
+│   ├── 14-aggregation.md
+│   └── 15-ctes-windows.md
 ├── scenarios/
 │   ├── 05-transactions.sh
 │   └── 09-backup.sh
