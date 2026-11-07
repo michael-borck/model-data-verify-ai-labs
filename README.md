@@ -45,6 +45,7 @@ local PostgreSQL server. The container is reachable only from your machine.
 | 07 | Backfills and idempotence | `make check LAB=07` |
 | 08 | Indexes and query plans | `make check LAB=08` |
 | 09 | Backups and restore tests | `make scenario LAB=09` |
+| 10 | Access, roles and row-level security | `make check LAB=10` |
 
 Each lab guide is in `exercises/`. Read the chapter, do the tasks, then run the
 check. The check is the point: it fails loudly when the answer is wrong.
@@ -162,7 +163,8 @@ Docker feature or use the repository's dev container.
 │   ├── 04-joins.sql
 │   ├── 06-migration.sql
 │   ├── 07-backfill.sql
-│   └── 08-indexes.sql
+│   ├── 08-indexes.sql
+│   └── 10-access.sql
 ├── exercises/
 │   ├── 01-model.md
 │   ├── 02-constraints.md
@@ -172,7 +174,8 @@ Docker feature or use the repository's dev container.
 │   ├── 06-migration.md
 │   ├── 07-backfill.md
 │   ├── 08-indexes.md
-│   └── 09-backup.md
+│   ├── 09-backup.md
+│   └── 10-access.md
 ├── scenarios/
 │   ├── 05-transactions.sh
 │   └── 09-backup.sh
