@@ -44,6 +44,7 @@ local PostgreSQL server. The container is reachable only from your machine.
 | 06 | Change without damage | `make check LAB=06` |
 | 07 | Backfills and idempotence | `make check LAB=07` |
 | 08 | Indexes and query plans | `make check LAB=08` |
+| 09 | Backups and restore tests | `make scenario LAB=09` |
 
 Each lab guide is in `exercises/`. Read the chapter, do the tasks, then run the
 check. The check is the point: it fails loudly when the answer is wrong.
@@ -88,8 +89,8 @@ assertion stops with an exception. A successful run ends with a line like:
 The checks are not a grading system. They are the same known-answer discipline the
 book teaches, written down so you can run it.
 
-Lab 05 is different. It is a two-session transaction scenario, not a SQL check.
-Run it with `make scenario LAB=05`.
+Labs 05 and 09 are scenarios, not SQL checks.
+Run them with `make scenario LAB=05` and `make scenario LAB=09`.
 
 ## The migration lab
 
@@ -170,9 +171,11 @@ Docker feature or use the repository's dev container.
 │   ├── 05-transactions.md
 │   ├── 06-migration.md
 │   ├── 07-backfill.md
-│   └── 08-indexes.md
+│   ├── 08-indexes.md
+│   └── 09-backup.md
 ├── scenarios/
-│   └── 05-transactions.sh
+│   ├── 05-transactions.sh
+│   └── 09-backup.sh
 └── solutions/
     └── 06-migration.sql
 ```

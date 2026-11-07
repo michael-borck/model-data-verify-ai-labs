@@ -14,7 +14,8 @@ help:
 	@echo "make up                 start Postgres"
 	@echo "make psql               open psql"
 	@echo "make check LAB=01       run a chapter check"
-	@echo "make scenario LAB=05    run a two-session scenario"
+	@echo "make scenario LAB=05    run a two-session transaction scenario"
+	@echo "make scenario LAB=09    run a dump and restore test"
 	@echo "make run FILE=path.sql  run a SQL file"
 	@echo "make reset              destroy the volume and rebuild from seed"
 	@echo "make logs               follow the database log"
@@ -62,7 +63,7 @@ scenario: up
 	@set -eu; \
 	file=$$(ls scenarios/$(LAB)-*.sh 2>/dev/null | head -1); \
 	if [ -z "$$file" ]; then \
-	  echo "No scenario for LAB=$(LAB). Try LAB=05."; \
+	  echo "No scenario for LAB=$(LAB). Try LAB=05 or 09."; \
 	  exit 1; \
 	fi; \
 	echo "Running $$file"; \
